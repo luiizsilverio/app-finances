@@ -10,12 +10,10 @@ const styles = StyleSheet.create({
   },
   menuWrapper: {
     justifyContent: 'center',
-    width: 50,
     height: '100%',
   },
   userWrapper: {
     justifyContent: 'center',
-    width: 50,
     height: '100%',    
   },
   userImageWrapper: {
@@ -31,8 +29,6 @@ const styles = StyleSheet.create({
   userImage: {
     width: '100%',
     height: '100%',
-
-
   }
 });
 
