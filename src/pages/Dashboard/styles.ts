@@ -1,32 +1,25 @@
-import { StyleSheet } from "react-native";
+import styled, { DefaultTheme } from 'styled-components/native';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 16,
-  },
-  textContainer: {
+export const Container = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+`;
 
-  },
-  title: {
-    fontFamily: 'Inter_800ExtraBold',
-    fontSize: 24,
-    color: '#121212'
-  },
-  subTitle: {
-    fontFamily: 'Inter_500Medium',
-    fontSize: 12,
-    color: '#666'
-  },
-  cardContainer: {
-    flexDirection: 'row',
-    padding: 16
-  },
-  icon: {
+export const Title = styled.Text`
+  font-family: ${({ theme }: DefaultTheme) => theme.fontTitle};
+  font-size: 24px;
+  color: #121212;
+`;
 
-  }
-});
+export const SubTitle = styled.Text`
+  font-family: ${({ theme }: DefaultTheme) => theme.fontSubtitle};
+  font-size: ${({ theme }: DefaultTheme) => theme.p};
+  color: #666;
+`;
 
-export default styles;
+export const CardContainer = styled.View`
+  flex-direction: row;
+    padding: 16px;
+`;

@@ -1,25 +1,26 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-import styles from './styles';
+import * as S from './styles';
 import { Header } from '../../components/Header';
 import { Card } from '../../components/Card';
+import { Footer } from '../../components/Footer';
 
 export function Dashboard() {
   return (
     <>
       <Header />
-      <View style={styles.container}>
-        <View style={styles.textContainer}>
-          <Text style={styles.title}>Olá, Luiz.</Text>
-          <Text style={styles.subTitle}>Bem-vindo de volta.</Text>
+      <S.Container>
+        <View>
+          <S.Title>Olá, Luiz.</S.Title>
+          <S.SubTitle>Bem-vindo de volta.</S.SubTitle>
         </View>
-        <View style={styles.icon}>
+        <View>
           <Feather name='sliders' size={24} color="#121212" />
         </View>
-      </View>
+      </S.Container>
 
-      <View style={styles.cardContainer}>
+      <S.CardContainer>
         <Card 
           title="230.000" 
           subtitle='Vendas' 
@@ -32,9 +33,9 @@ export function Dashboard() {
           color='#e6dff1' 
           icon={<Feather name="user" size={24} color="#121212" />}
         />
-      </View>
+      </S.CardContainer>
 
-      <View style={styles.cardContainer}>
+      <S.CardContainer>
         <Card 
           title="1423" 
           subtitle='Produtos' 
@@ -47,7 +48,8 @@ export function Dashboard() {
           color='#f1dfde' 
           icon={<Feather name="pie-chart" size={24} color="#121212" />}
         />
-      </View>
+      </S.CardContainer>
+      <Footer />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
-import { Text, View } from 'react-native';
 
-import styles from './styles';
+import * as S from './styles';
 
 interface CardProps {
   title: string;
@@ -12,12 +11,12 @@ interface CardProps {
 
 export function Card({ title, subtitle, color = '#f8eee6', icon }: CardProps) {
   return (
-    <View style={[styles.container, {backgroundColor: color}]}>
-      <View style={styles.iconContainer}>{ icon }</View>
+    <S.Container bgColor={color}>
+      <S.IconContainer>{ icon }</S.IconContainer>
 
-      <Text style={styles.title}>{ title }</Text>
-      
-      <Text style={styles.subTitle}>{ subtitle }</Text>
-    </View>
+      <S.Title>{ title }</S.Title>
+
+      <S.Subtitle>{ subtitle }</S.Subtitle>
+    </S.Container>
   );
 }

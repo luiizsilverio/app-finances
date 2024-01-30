@@ -1,35 +1,36 @@
-import { StyleSheet } from "react-native";
+import styled from 'styled-components/native';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: 100,
-    padding: 16,
-  },
-  menuWrapper: {
-    justifyContent: 'center',
-    height: '100%',
-  },
-  userWrapper: {
-    justifyContent: 'center',
-    height: '100%',    
-  },
-  userImageWrapper: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 44,
-    height: 44,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: '#d9d9d9',
-    overflow: 'hidden',
-  },
-  userImage: {
-    width: '100%',
-    height: '100%',
-  }
-});
+export const Container = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 16px;
+`;
 
-export default styles;
+export const MenuWrapper = styled.View`
+  justify-content: center;
+  height: 100%;
+`;
+
+export const UserWrapper = styled.View`
+  justify-content: center;
+  height: 100%;
+`;
+
+export const UserImageWrapper = styled.View`
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #d9d9d9;
+  overflow: hidden;
+`;
+
+export const UserImage = styled.Image`
+  width: 100%;
+  height: 100%;
+`;
+

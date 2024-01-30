@@ -1,8 +1,10 @@
 import { View, ActivityIndicator } from 'react-native';
 import { useFonts, Inter_500Medium, Inter_800ExtraBold } from '@expo-google-fonts/inter';
 import { StatusBar } from 'expo-status-bar';
+import { ThemeProvider } from 'styled-components/native';
 
 import { Dashboard } from './src/pages/Dashboard';
+import { theme } from './src/theme';
 
 function MyLoading() {
   return (
@@ -23,9 +25,9 @@ export default function App() {
   }
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Dashboard />
       <StatusBar style="auto" />
-    </>
+    </ThemeProvider>
   );
 }
