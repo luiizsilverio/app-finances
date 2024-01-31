@@ -49,7 +49,8 @@ export function Dashboard() {
           icon={<Feather name="pie-chart" size={24} color="#121212" />}
         />
       </S.CardContainer>
-      <Footer />
+
+      {/* <Footer /> */}
     </>
   );
 }
